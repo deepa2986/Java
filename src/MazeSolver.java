@@ -8,32 +8,7 @@ public class MazeSolver {
     //2 = destination
 
     public static void main(String[] args) throws FileNotFoundException {
-        ArrayList<Maze> mazes = new ArrayList<>();
-
-        Maze m = new Maze();
-//        int[][] n_maze = {
-//                {1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0},
-//                {0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0},
-//                {0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1},
-//                {1, 1, 1, 2, 0, 1, 0, 1, 0, 1, 0},
-//                {0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0},
-//                {0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1}};
-//        n.maze = n_maze;
-//        n.start = new Position(4,8);
-//        n.path = new LinkedList<Position>();
-//        mazes.add(m);
-//        mazes.add(n);
-
-        Scanner in = new Scanner(new File("mazes.txt"));
-        int rows = Integer.parseInt(in.nextLine());
-        m.maze = new int[rows][];
-        for(int i = 0; i < rows; i++){
-            String line = in.nextLine();
-            m.maze[i]   = Arrays.stream(line.split(", ")).mapToInt(Integer::parseInt).toArray();
-        }
-        m.start = new Position(Integer.parseInt(in.nextLine()),Integer.parseInt(in.nextLine()));
-        mazes.add(m);
-
+        ArrayList<Maze> mazes = readMazes();
         int i = 0;
         while(i < mazes.size()) {
             if(solveMaze(mazes.get(i))){
@@ -41,6 +16,26 @@ public class MazeSolver {
             }else System.out.println("no path");
             i++;
         }
+    }
+
+    private static ArrayList<Maze> readMazes() throws FileNotFoundException {
+
+        ArrayList<Maze> mazes = new ArrayList<>();
+        Scanner in = new Scanner(new File("mazes.txt"));
+        while (in.hasNextLine()) {
+            Maze m = new Maze();
+            int rows = Integer.parseInt(in.nextLine());
+            m.maze = new int[rows][];
+            for (int i = 0; i < rows; i++) {
+                String line = in.nextLine();
+                m.maze[i] = Arrays.stream(line.split(", ")).mapToInt(Integer::parseInt).toArray();
+            }
+            m.start = new Position(Integer.parseInt(in.nextLine()), Integer.parseInt(in.nextLine()));
+            in.nextLine();
+            mazes.add(m);
+
+        }
+        return mazes;
     }
 
     private static boolean solveMaze(Maze m) {
