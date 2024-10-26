@@ -21,7 +21,7 @@ public class MazeSolver {
     private static ArrayList<Maze> readMazes() throws FileNotFoundException {
 
         ArrayList<Maze> mazes = new ArrayList<>();
-        Scanner in = new Scanner(new File("mazes.txt"));
+        Scanner in = new Scanner(new File("mazess.txt"));
         while (in.hasNextLine()) {
             Maze m = new Maze();
             int rows = Integer.parseInt(in.nextLine());

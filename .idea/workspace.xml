@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="15c0346a-c9db-4a87-9000-e61359780bcf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mazes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mazes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MazeSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MazeSolver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
