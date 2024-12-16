@@ -1,44 +1,7 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.*;
+package com.maze.solver;
 
 public class MazeSolver {
-    //0 = wall
-    //1 = path
-    //2 = destination
-
-    public static void main(String[] args) throws FileNotFoundException {
-        ArrayList<Maze> mazes = readMazes();
-        int i = 0;
-        while(i < mazes.size()) {
-            if(solveMaze(mazes.get(i))){
-                System.out.println("you won!");
-            }else System.out.println("no path");
-            i++;
-        }
-    }
-
-    private static ArrayList<Maze> readMazes() throws FileNotFoundException {
-
-        ArrayList<Maze> mazes = new ArrayList<>();
-        Scanner in = new Scanner(new File("mazess.txt"));
-        while (in.hasNextLine()) {
-            Maze m = new Maze();
-            int rows = Integer.parseInt(in.nextLine());
-            m.maze = new int[rows][];
-            for (int i = 0; i < rows; i++) {
-                String line = in.nextLine();
-                m.maze[i] = Arrays.stream(line.split(", ")).mapToInt(Integer::parseInt).toArray();
-            }
-            m.start = new Position(Integer.parseInt(in.nextLine()), Integer.parseInt(in.nextLine()));
-            in.nextLine();
-            mazes.add(m);
-
-        }
-        return mazes;
-    }
-
-    private static boolean solveMaze(Maze m) {
+    public static boolean solveMaze(Maze m) {
         Position position = m.start;
         m.path.push(position);
 

@@ -1,3 +1,5 @@
+package com.maze.solver;
+
 import java.util.LinkedList;
 
 public class Maze {

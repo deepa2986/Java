@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="15c0346a-c9db-4a87-9000-e61359780bcf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MazeSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MazeSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/maze/solver/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/maze/solver/Maze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/maze/solver/MazeData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/maze/solver/MazeData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/maze/solver/MazeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/maze/solver/MazeMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/maze/solver/MazeSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/maze/solver/MazeSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/maze/solver/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/maze/solver/Position.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,15 +33,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Deepa G K/Programs/MazeSolver",
+    "settings.editor.selected.configurable": "preferences.general"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="MazeSolver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MazeSolver" />
+      <option name="MAIN_CLASS_NAME" value="com.maze.solver.MazeSolver" />
       <module name="MazeSolver" />
       <method v="2">
         <option name="Make" enabled="true" />

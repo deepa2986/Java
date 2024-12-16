@@ -1,3 +1,5 @@
+package com.maze.solver;
+
 public class Position {
     public int x;
     public int y;
